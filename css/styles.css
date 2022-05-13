@@ -1,25 +1,25 @@
-
 :root {
     --text-color: #757575;
     --header-color: #212121;
     --logo-color: #000000;
-    --accent-color: #2196F3;
-    --bg-color: #FFFFFF;
-    --secondary-bg-color:#F5F4FA;
-    --additional-bg-color:#2F303A;
+    --accent-color: #2196f3;
+    --bg-color: #ffffff;
+    --secondary-bg-color: #f5f4fa;
+    --additional-bg-color: #2f303a;
     --secondary-contact-color: rgba(255, 255, 255, 0.6);
-    --separator-line-color: #ECECEC;
-    --border-color: #EEEEEE;
-    --icon-color: #AFB1B8;
+    --separator-line-color: #ececec;
+    --border-color: #eeeeee;
+    --icon-color: #afb1b8;
     --box-shadow-color1: rgba(0, 0, 0, 0.15);
     --box-shadow-color2: rgba(0, 0, 0, 0.12);
     --box-shadow-color3: rgba(0, 0, 0, 0.14);
     --box-shadow-color4: rgba(0, 0, 0, 0.2);
     --box-shadow-color5: rgba(0, 0, 0, 0.1);
     --box-shadow-color6: rgba(0, 0, 0, 0.08);
+    --box-shadow-color7: rgba(0, 0, 0, 0.06);
+    --box-shadow-color8: rgba(0, 0, 0, 0.16);
     --gradient-color: rgba(47, 48, 58, 0.4);
     --secondary-icon-bg-color: rgba(255, 255, 255, 0.1);
-
 }
 
 /* Основной текст */
@@ -29,17 +29,17 @@ body {
     font-family: Roboto, sans-serif;
     font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;  
-  }
+    letter-spacing: 0.03em;
+}
 
-  /* Обнуляем отступы */
-  h1,
-  h2,
-  h3,
-  p,
-  ul {
-      margin: 0;
-  }
+/* Обнуляем отступы */
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
 
 /* Логотип */
 .logo {
@@ -58,22 +58,22 @@ body {
     color: var(--accent-color);
 }
 
- /* Cписки (убираем маркеры и левый внутренний отступ) */
- .nav-list,
- .contact-list,
- .features-list,
- .activites-list,
- .team-list,
- .address-list,
- .portfolio-btn-list,
- .project-list,
- .social-list,
- .customers-list {
+/* Cписки (убираем маркеры и левый внутренний отступ) */
+.nav-list,
+.contact-list,
+.features-list,
+.activites-list,
+.team-list,
+.address-list,
+.portfolio-btn-list,
+.project-list,
+.social-list,
+.customers-list {
     list-style: none;
     padding-left: 0;
- }
+}
 
- /* Cсылки */
+/* Cсылки */
 .nav-link,
 .contact-link {
     color: var(--header-color);
@@ -84,23 +84,26 @@ body {
     margin-left: 50px;
 }
 
+.project-link {
+    text-decoration: none;
+}
+
 /* Переопределаем цвет контактов */
 .header .contact-link {
     color: var(--text-color);
-    
 }
 
 /* Переопределяем цвет ссылок при наведении мышей или фокусе с клафиатуры,
     a также цвет ссылки текущей страницы */
-    .nav-link:hover,
-    .nav-link:focus,
-    .contact-link:hover,
-    .contact-link:focus,
-    .footer .contact-link:hover,
-    .footer .contact-link:focus,
-    .current { 
-        color: var(--accent-color);
-    }
+.nav-link:hover,
+.nav-link:focus,
+.contact-link:hover,
+.contact-link:focus,
+.footer .contact-link:hover,
+.footer .contact-link:focus,
+.current {
+    color: var(--accent-color);
+}
 
 /* Разделительная черта между шапкой и остальной страницей */
 .header {
@@ -118,7 +121,7 @@ body {
     padding: 200px 0;
 
     background-image: linear-gradient(var(--gradient-color), var(--gradient-color)),
-    url(../images/background.jpg);
+        url(../images/background.jpg);
     max-width: 1600px;
     margin: auto;
     background-position: center;
@@ -136,12 +139,12 @@ body {
 }
 
 /* Кнопка */
-.hero-button{
+.hero-button {
     color: var(--bg-color);
     background: var(--accent-color);
     padding: 10px 32px;
     border-width: 0;
-    border-radius: 4px; 
+    border-radius: 4px;
     box-shadow: 0px 4px 4px var(--box-shadow-color1);
     font-family: Roboto, sans-serif;
     font-weight: 700;
@@ -185,9 +188,8 @@ body {
 .team-item {
     background-color: var(--bg-color);
     text-align: center;
-    box-shadow: 0px 1px 3px var(--box-shadow-color2), 
-                0px 1px 1px var(--box-shadow-color3),
-                0px 2px 1px var(--box-shadow-color4);
+    box-shadow: 0px 1px 3px var(--box-shadow-color2), 0px 1px 1px var(--box-shadow-color3),
+        0px 2px 1px var(--box-shadow-color4);
     border-radius: 0px 0px 4px 4px;
     padding-bottom: 30px;
 }
@@ -219,19 +221,19 @@ body {
     display: flex;
 }
 
+/* Блок соц сетей в подвале */
 .footer-social {
     margin-left: 70px;
     padding-top: 12px;
 }
 
 /* Оформляем блок адреса */
-.address-list{
+.address-list {
     font-style: normal;
     margin-top: 20px;
     margin-bottom: 0;
     padding-right: 16px;
 }
-
 
 /* Переопределяем цвета в подвале */
 .footer .logo {
@@ -254,7 +256,7 @@ body {
 }
 
 .address-list li {
-    margin-top: 5px; 
+    margin-top: 5px;
 }
 
 .footer-social-text {
@@ -284,7 +286,6 @@ body {
     cursor: pointer;
 }
 
-
 /* Переопределяем цвет кнопок фильтра при наведении мыши и
    фокуса с клавиатуры а также "Активной" кнопки*/
 .portfolio-btn:hover,
@@ -292,9 +293,8 @@ body {
 .portfolio-btn.current {
     background-color: var(--accent-color);
     color: var(--bg-color);
-    box-shadow: 0px 3px 1px var(--box-shadow-color5),
-                0px 1px 2px var(--box-shadow-color6),
-                0px 2px 2px var(--box-shadow-color2);
+    box-shadow: 0px 3px 1px var(--box-shadow-color5), 0px 1px 2px var(--box-shadow-color6),
+        0px 2px 2px var(--box-shadow-color2);
 }
 
 /* Карточка проекта */
@@ -306,7 +306,7 @@ body {
 /* Убираем лишниее пространство под картинкой */
 .project-item img,
 .activites-list img,
-.team-list img{
+.team-list img {
     display: block;
 }
 
@@ -332,6 +332,7 @@ body {
     font-size: 16px;
     line-height: 1.88;
     margin: 4px 0 0 0;
+    color: var(--text-color);
 }
 
 /* Ширина и отступы основного содержимого*/
@@ -349,12 +350,7 @@ body {
 
 /* Один отступ оказался лишним */
 .section.activites {
-    padding-top:0;
-}
-
-/* Ещё один отступ меньший чем 94px */
-.section.portfolio {
-    padding-bottom: 59px;
+    padding-top: 0;
 }
 
 /* Flex-контейнеры где надо */
@@ -393,7 +389,7 @@ body {
 }
 
 /* Иконки телефона и почты */
-.contact-link-icon{
+.contact-link-icon {
     margin-right: 10px;
     fill: currentColor;
 }
@@ -430,6 +426,7 @@ body {
     width: 206px;
 }
 
+/* Ссылка соц сети в подвале */
 .footer .social-link {
     color: var(--bg-color);
 }
@@ -458,6 +455,7 @@ body {
     fill: currentColor;
 }
 
+/* Ссылка на клиента */
 .customer-link {
     display: flex;
     align-items: center;
@@ -475,21 +473,19 @@ body {
     border: 1px solid var(--accent-color);
 }
 
+/* Иконка клиента */
 .customer-icon {
     width: 106px;
     height: 60px;
     fill: currentColor;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* Фокус, ховер карточки проека в портфолио */
+.project-item:hover,
+.project-item:focus {
+    border: 1px solid var(--border-color);
+    box-shadow: 0px 1px 1px var(--box-shadow-color2), 0px 4px 4px var(--box-shadow-color7),
+        1px 4px 6px var(--box-shadow-color8);
+    margin-right: -2px;
+    margin-bottom: -2px;
+}

@@ -10,12 +10,15 @@
     --secondary-contact-color: rgba(255, 255, 255, 0.6);
     --separator-line-color: #ECECEC;
     --border-color: #EEEEEE;
+    --icon-color: #AFB1B8;
     --box-shadow-color1: rgba(0, 0, 0, 0.15);
     --box-shadow-color2: rgba(0, 0, 0, 0.12);
     --box-shadow-color3: rgba(0, 0, 0, 0.14);
     --box-shadow-color4: rgba(0, 0, 0, 0.2);
     --box-shadow-color5: rgba(0, 0, 0, 0.1);
     --box-shadow-color6: rgba(0, 0, 0, 0.08);
+    --gradient-color: rgba(47, 48, 58, 0.4);
+    --secondary-icon-bg-color: rgba(255, 255, 255, 0.1);
 
 }
 
@@ -63,7 +66,9 @@ body {
  .team-list,
  .address-list,
  .portfolio-btn-list,
- .project-list {
+ .project-list,
+ .social-list,
+ .customers-list {
     list-style: none;
     padding-left: 0;
  }
@@ -98,7 +103,7 @@ body {
     }
 
 /* Разделительная черта между шапкой и остальной страницей */
-.head {
+.header {
     border-bottom: 1px solid var(--separator-line-color);
 }
 
@@ -111,6 +116,12 @@ body {
     align-items: center;
     justify-content: center;
     padding: 200px 0;
+
+    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)),
+    url(../images/background.jpg);
+    max-width: 1600px;
+    margin: auto;
+    background-position: center;
 }
 
 .slogan {
@@ -178,6 +189,7 @@ body {
                 0px 1px 1px var(--box-shadow-color3),
                 0px 2px 1px var(--box-shadow-color4);
     border-radius: 0px 0px 4px 4px;
+    padding-bottom: 30px;
 }
 
 .team-top-title {
@@ -192,7 +204,7 @@ body {
     color: var(--text-color);
     font-size: 16px;
     line-height: 1.19;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
 }
 
 /* Подвал */
@@ -204,6 +216,12 @@ body {
     padding: 60px 15px;
     width: 1200px;
     margin: auto;
+    display: flex;
+}
+
+.footer-social {
+    margin-left: 70px;
+    padding-top: 12px;
 }
 
 /* Оформляем блок адреса */
@@ -211,6 +229,7 @@ body {
     font-style: normal;
     margin-top: 20px;
     margin-bottom: 0;
+    padding-right: 16px;
 }
 
 
@@ -236,6 +255,18 @@ body {
 
 .address-list li {
     margin-top: 5px; 
+}
+
+.footer-social-text {
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--bg-color);
+    margin-bottom: 20px;
+}
+
+.footer .social-link {
+    background-color: var(--secondary-icon-bg-color);
 }
 
 /* Кнопки портфолио */
@@ -327,13 +358,14 @@ body {
 }
 
 /* Flex-контейнеры где надо */
-.header,
+.hat,
 .nav,
 .nav-list,
 .contact-list,
 .features-list,
 .activites-list,
-.team-list {
+.team-list,
+.customers-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -349,7 +381,6 @@ body {
 /* Блок отдельного преимущества */
 .features-item {
     width: 270px;
-    padding-right: 30px;
 }
 
 /* Список работ в портфолио */
@@ -360,6 +391,97 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+
+/* Иконки телефона и почты */
+.contact-link-icon{
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+/* Выравниевание иконок телефона и почты */
+.contact-link {
+    display: flex;
+    align-items: center;
+}
+
+/* Иконки преимуществ */
+.features-icon {
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-bg-color);
+    padding: 25px 0;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+/* Список социальных сетей */
+.social-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Список соц сетей для команды */
+.team .social-list {
+    padding: 0 32px;
+}
+
+/* Список соц сетей для подвала */
+.footer .social-list {
+    width: 206px;
+}
+
+.footer .social-link {
+    color: var(--bg-color);
+}
+
+/* Ссылка на социальную сеть */
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    color: var(--icon-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/* Иконка соцальной сети */
+.social-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.customer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    color: var(--icon-color);
+}
+
+.customer-link:hover,
+.customer-link:focus {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+.customer-icon {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}
+
+
 
 
 

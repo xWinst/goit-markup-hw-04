@@ -310,6 +310,7 @@ ul {
 .project-item {
     margin-left: 30px;
     margin-top: 30px;
+    box-sizing: content-box;
 }
 
 /* Убираем лишниее пространство под картинкой */
